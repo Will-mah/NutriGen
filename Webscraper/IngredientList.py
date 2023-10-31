@@ -3,7 +3,8 @@ from bs4 import BeautifulSoup
 import re
 
 # URL of the page with the ingredients list
-url = 'https://www.bbc.co.uk/food/recipes/fluffyamericanpancak_74828'
+url = ('https://www.bbc.co.uk/food/recipes/halloween_ghost_cupcakes_04170')
+#url = input('Enter Link: ')
 
 # Fetch the content from the URL
 response = requests.get(url)
@@ -108,15 +109,15 @@ def split_ingredient(ingredient):
     return quantity, name
 
 #Test the function
-ingredient_list = [
-    '75g/2½oz self-raising flour',
-    '1 cup/240ml milk',
-    '1/2 tbsp vanilla extract',
-    '140g/5oz butter, softened',
-    '4 eggs',
-    '1 litre/1¾ pints vegetable stock',
-    '½ tsp salt'  # Added this test case
-]
+# ingredient_list = [
+#     '75g/2½oz self-raising flour',
+#     '1 cup/240ml milk',
+#     '1/2 tbsp vanilla extract',
+#     '140g/5oz butter, softened',
+#     '4 eggs',
+#     '1 litre/1¾ pints vegetable stock',
+#     '½ tsp salt'  # Added this test case
+# ]
 
 
 split_ingredients = [split_ingredient(ingredient) for ingredient in ingredient_list]
